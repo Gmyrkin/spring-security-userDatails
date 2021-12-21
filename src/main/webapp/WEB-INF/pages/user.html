@@ -1,32 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>Add User</title>
+    <meta charset="UTF-8">
+    <title></title>
 </head>
 <body>
-<h1>User table</h1>
-    <table cellspacing="1" border="5" cellpadding="7">
-        <tr>
-            <th><h3>Id</h3></th>
-            <th><h3>Name</h3></th>
-            <th><h3>Password</h3></th>
-            <th colspan="2"><h3>Form with user</h3></th>
-        </tr>
-            <tr th:each="user : ${listUser}">
-                <td th:text="${user.id}"></td>
-                <td th:text="${user.name}"></td>
-                <td th:text="${user.password}"></td>
-                <td>
-                    <a th:href="${'/remove/'+ user.getId()}">Delete</a>
-                </td>
-                <td><a th:href="@{/user/update/{id}(id=${user.id})}">Edit</a></td>
-            </tr>
-    </table>
-    <br>
-<form action="/user/add" method="POST">
-    Name: <input type="text" name="name">
-    Password: <input type="text" name="password">
-    <input type = "submit" value = "Create user">
-</form>
+Hello user!
 </body>
 </html>
