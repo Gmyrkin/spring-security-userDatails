@@ -75,6 +75,27 @@ public class WebConfig implements WebMvcConfigurer {
         dataSource.setPassword("root");
         return dataSource;
     }
+
+//        @Bean
+//    public void initBd() {
+//        User user1 = new User();
+//        user1.setName("admin");
+//        user1.setPassword(passwordEncoder.encode("admin"));
+//        Set<Role> roleAdmin = new HashSet<>();
+//        roleAdmin.add(roleService.getRoleId(1L));
+//        user1.setRoles(roleAdmin);
+//        userService.addUser(user1);
+//
+//            User user = new User();
+//        user.setName("user");
+//        user.setPassword(passwordEncoder.encode("user"));
+//        Set<Role> roleUser = new HashSet<>();
+//        roleUser.add(roleService.getRoleId(2L));
+//        user.setRoles(roleUser);
+//        userService.addUser(user);
+//    }
+
+
     @Bean
     public Properties hibernateProperties(){
         Properties hibernateProp = new Properties();

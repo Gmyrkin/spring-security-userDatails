@@ -10,6 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import ru.gmyrkin.crud.controller.LoginSuccessHandler;
 import ru.gmyrkin.crud.services.MyUserDetailsService;
 
 @EnableWebSecurity
@@ -35,13 +37,21 @@ public class MySecurityConf extends WebSecurityConfigurerAdapter {
         builder.authenticationProvider(authProvider());
     }
 
+    @Bean
+    public AuthenticationSuccessHandler flashLoginSuccessHandler() {
+        return new LoginSuccessHandler();
+    }
+
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(final HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/**").hasAnyRole("ADMIN", "USER")
                 .antMatchers("/user/**").hasRole("ADMIN")
-                .and().formLogin().permitAll()
-        .and().csrf().disable();
+                .and().formLogin()
+                .permitAll()
+                .successHandler(new LoginSuccessHandler())
+                .and().csrf().disable()
+                .logout();
     }
 
     @Bean

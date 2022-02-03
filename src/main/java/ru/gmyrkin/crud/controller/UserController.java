@@ -3,6 +3,7 @@ package ru.gmyrkin.crud.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -57,10 +58,15 @@ public class UserController {
     @PostMapping("/user/add")
     public String addUser (@ModelAttribute User user){
         if (user.getId() == 0) {
+
+
+
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             Set<Role> roleDef = new HashSet<>();
             roleDef.add(roleService.getRoleId(2L));
             user.setRoles(roleDef);
+
+
             userService.addUser(user);
         } else {
             userService.updateUser(user);
@@ -105,6 +111,12 @@ public class UserController {
         }
 
         return "redirect:/user";
+    }
+
+    // Login form
+    @RequestMapping("/login")
+    public String login() {
+        return "redirect:/handler";
     }
 
 
