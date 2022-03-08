@@ -1,12 +1,10 @@
-package ru.gmyrkin.crud.model;
+package com.example.education_3_1_2.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import ru.gmyrkin.crud.services.UserService;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 @Entity

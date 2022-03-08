@@ -1,4 +1,4 @@
-package ru.gmyrkin.crud.model;
+package com.example.education_3_1_2.model;
 
 import org.springframework.security.core.GrantedAuthority;
 

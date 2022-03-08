@@ -1,7 +1,6 @@
-package ru.gmyrkin.crud.services;
+package com.example.education_3_1_2.services;
 
-import org.springframework.stereotype.Service;
-import ru.gmyrkin.crud.model.Role;
+import com.example.education_3_1_2.model.Role;
 
 public interface RoleService {
     void addRole (Role role);

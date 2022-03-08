@@ -1,4 +1,4 @@
-package ru.gmyrkin.crud.controller;
+package com.example.education_3_1_2.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

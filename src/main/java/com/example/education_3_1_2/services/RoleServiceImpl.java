@@ -1,10 +1,10 @@
-package ru.gmyrkin.crud.services;
+package com.example.education_3_1_2.services;
 
+import com.example.education_3_1_2.dao.RoleDao;
+import com.example.education_3_1_2.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.gmyrkin.crud.dao.RoleDao;
-import ru.gmyrkin.crud.dao.UserDao;
-import ru.gmyrkin.crud.model.Role;
+
 @Service
 public class RoleServiceImpl implements RoleService {
 

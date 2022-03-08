@@ -1,4 +1,4 @@
-package ru.gmyrkin.crud.config;
+package com.example.education_3_1_2.config;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;

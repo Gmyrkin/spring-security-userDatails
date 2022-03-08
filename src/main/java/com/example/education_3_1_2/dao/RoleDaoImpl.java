@@ -1,7 +1,7 @@
-package ru.gmyrkin.crud.dao;
+package com.example.education_3_1_2.dao;
 
 import org.springframework.stereotype.Repository;
-import ru.gmyrkin.crud.model.Role;
+import com.example.education_3_1_2.model.Role;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

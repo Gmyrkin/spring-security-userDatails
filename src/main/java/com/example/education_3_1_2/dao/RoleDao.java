@@ -1,6 +1,6 @@
-package ru.gmyrkin.crud.dao;
+package com.example.education_3_1_2.dao;
 
-import ru.gmyrkin.crud.model.Role;
+import com.example.education_3_1_2.model.Role;
 
 public interface RoleDao {
     void addRole (Role role);

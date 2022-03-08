@@ -1,14 +1,13 @@
-package ru.gmyrkin.crud.dao;
+package com.example.education_3_1_2.dao;
 
+import com.example.education_3_1_2.model.User;
 import org.springframework.stereotype.Repository;
-import ru.gmyrkin.crud.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.logging.Logger;
 
 @Repository
 @Transactional

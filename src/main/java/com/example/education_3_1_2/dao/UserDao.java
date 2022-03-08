@@ -1,6 +1,6 @@
-package ru.gmyrkin.crud.dao;
+package com.example.education_3_1_2.dao;
 
-import ru.gmyrkin.crud.model.User;
+import com.example.education_3_1_2.model.User;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package ru.gmyrkin.crud.services;
+package com.example.education_3_1_2.services;
 
+import com.example.education_3_1_2.dao.UserDao;
+import com.example.education_3_1_2.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.gmyrkin.crud.dao.UserDao;
-import ru.gmyrkin.crud.model.User;
 
 import javax.transaction.Transactional;
 import java.util.List;

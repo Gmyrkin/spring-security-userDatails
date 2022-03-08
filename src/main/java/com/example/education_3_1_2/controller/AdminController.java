@@ -1,16 +1,16 @@
-package ru.gmyrkin.crud.controller;
+package com.example.education_3_1_2.controller;
 
 
+import com.example.education_3_1_2.model.Role;
+import com.example.education_3_1_2.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import ru.gmyrkin.crud.model.Role;
-import ru.gmyrkin.crud.model.User;
-import ru.gmyrkin.crud.services.RoleService;
-import ru.gmyrkin.crud.services.UserService;
+import com.example.education_3_1_2.services.RoleService;
+import com.example.education_3_1_2.services.UserService;
 
 import java.util.HashSet;
 import java.util.Set;
